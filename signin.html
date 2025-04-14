@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('h3.jpg'); /* Replace this with your image file */
+    background-size: 100% 100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+
+            color: #2d3436;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+    
+        h1 {
+            margin-bottom: 20px;
+            color: #2d3436;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+    
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2d3436;
+        }
+    
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #74b9ff;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            color: #000000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            appearance: none;
+        }
+    
+        select:hover {
+            border-color: #6c5ce7;
+        }
+    
+        p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #636e72;
+        }
+    
+        p a {
+            color: #6c5ce7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form id="roleSelectionForm" action="process_role.php" method="POST">
+            <div class="input-group">
+                <label for="userRole">Select Role</label>
+                <select id="userRole" name="userRole" required 
+                    style="
+                        width: 100%;
+                        padding: 12px;
+                        font-size: 16px;
+                        border: 2px solid #74b9ff;
+                        border-radius: 8px;
+                        background: linear-gradient(135deg, #74b9ff, #a29bfe);
+                        color: #000000;
+                        font-weight: bold;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        appearance: none;">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="employee">Employee</option>
+                    <option value="intern">Intern</option>
+                </select>
+            </div>
+        </form>
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const userRole = document.getElementById("userRole");
+
+            // Add event listener to detect changes in the dropdown
+            if (userRole) {
+                userRole.addEventListener("change", () => {
+                    if (userRole.value === "doctor") {
+                        // Redirect to Doctor Signup page
+                        window.location.href = "doctor_signup.html";
+                    } else if (userRole.value === "employee") {
+                        // Redirect to Employee Signup page
+                        window.location.href = "employee_signup.html";
+                    }
+                    else if (userRole.value === "intern") {
+                        // Redirect to Employee Signup page
+                        window.location.href = "intern_signup.html";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

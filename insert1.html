@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #5cb85c;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Appointment</h1>
+        <form action="insert1.php" method="POST">
+            <label for="P_name">Patient Name</label>
+            <input type="text" id="P_name" name="P_name" required>
+
+            <label for="P_id">Patient ID</label>
+            <input type="text" id="P_id" name="P_id" required>
+
+            <label for="Phone_no">Phone Number</label>
+            <input type="number" id="Phone_no" name="Phone_no" required>
+
+
+            <label for="D_name">Doctor Name</label>
+            <input type="D_name" id="D_name" name="D_name" required>
+
+            <label for="Gender">Gender</label>
+            <input type="text" id="Gender" name="Gender" required>
+
+            <label for="Age">Age</label>
+            <input type="number" id="Age" name="Age" required>
+
+            <label for="Disease">Disease</label>
+            <input type="text" id="Disease" name="Disease" required>
+
+            <label for="Medication">Medication</label>
+            <input type="text" id="Medication" name="Medication" required>
+
+            <label for="Admission_date">Admission Date</label>
+            <input type="date" id="Admission_date" name="Admission_date" required>
+
+            <label for="Discharge_date">Discharge Date</label>
+            <input type="date" id="Discharge_date" name="Discharge_date">
+
+            <label for="Visit_type">Visit Type</label>
+            <select id="Visit_type" name="Visit_type" required>
+                <option value="">--Select Visit Type--</option>
+                <option value="Inpatient">Inpatient</option>
+                <option value="Outpatient">Outpatient</option>
+            </select>
+
+            <label for="Billing">Billing Amount</label>
+            <input type="number" id="Billing" name="Billing" required>
+
+            <label for="D_id">Doctor ID</label>
+            <input type="number" id="D_id" name="D_id" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

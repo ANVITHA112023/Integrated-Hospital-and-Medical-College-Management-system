@@ -1,0 +1,117 @@
+<style>
+  /* General Styles */
+  body {
+    background-color: #75d8ff; /* Subtle soft gray */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1 {
+    color: #2c3e50; /* Rich dark blue */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  /* Section Container */
+  .section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for modern look */
+    padding: 30px 40px;
+    margin: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .section h2 {
+    color: #007acc; /* Vibrant blue for section headers */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  /* Link Buttons */
+  a {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3498db; /* Soft blue */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    background-color: #2980b9; /* Darker blue for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Elevation on hover */
+  }
+  .logout-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logout-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn:focus {
+            outline: none;
+        }
+</style>
+
+<html>
+  <head>
+    <title>Record Management</title>
+  </head>
+  <body>
+    <h1>Record Management</h1>
+
+    <!-- Section for Doctor Records -->
+    <div class="section">
+      <h2>Doctor Records</h2>
+      <div class="links">
+        <a href="insert.html">Insert into Doctor Record</a>
+        <a href="update.html">Update Doctor Record</a>
+        <a href="delete.html">Delete Doctor Record</a>
+        <a href="display.php">Display Doctor Records</a>
+      </div>
+    </div>
+
+    <!-- Section for Employee Records -->
+    <div class="section">
+      <h2>Employee Records</h2>
+      <div class="links">
+        <a href="insert2.html">Insert into Employee Record</a>
+        <a href="update2.html">Update Employee Record</a>
+        <a href="delete2.html">Delete Employee Record</a>
+        <a href="display2.php">Display Employee Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="window.location.href = 'index.php';">Logout</button>
+  
+  </body>
+</html>

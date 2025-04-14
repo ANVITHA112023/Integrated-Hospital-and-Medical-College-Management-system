@@ -1,0 +1,76 @@
+<style>
+  /* General Styles */
+  body {
+    background-color: #9be6ff; /* Soft light gray background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  /* Form Container */
+  form {
+    background-color: #ffffff; /* White form background */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%;
+    max-width: 400px;
+  }
+
+  label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333; /* Dark gray for text */
+    margin-bottom: 8px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="text"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect */
+  }
+
+  input[type="submit"] {
+    background-color: #007bff; /* Vibrant blue */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+
+  input[type="submit"]:active {
+    transform: translateY(0); /* Reset on click */
+  }
+</style>
+<form action="delete2.php" method="post">
+    <label for="E_id">ID:</label>
+    <input type="text" id="E_id" name="E_id"><br>
+  
+    <input type="submit" name="submit" value="Delete">
+  </form>
+  

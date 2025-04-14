@@ -1,0 +1,91 @@
+<style>
+    body {
+      font-family: 'Poppins', sans-serif; /* Add Poppins font via Google Fonts for a modern look */
+    background-image: url('h6.png'); /* Replace this with your image file */
+    background-size: 100% 100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+  
+    h1 {
+            display: block;
+            margin: 10px auto; /* Center horizontally */
+            padding: 30px 30px;
+            background-color: #c8eaea;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: rgb(67, 19, 19);
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            width: 60%;
+            max-width: 300px;
+        }
+
+  a {
+    display: block;
+    margin: 10px 0;
+    padding: 30px 30px;
+    background-color: #c7cb93; /* Green button */
+    color:black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+    width: 60%;
+    max-width: 300px;
+  }
+
+  a:hover {
+    background-color: rgb(176, 218, 97);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  a:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  .logout-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logout-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn:focus {
+            outline: none;
+        }
+  </style>
+  
+  
+  <html>
+    <body>
+      <h1>Intern Table</h1>
+      <a href="us.html">About Intership and career opportunities</a><br>
+      <a href="info.html">Vision and Mission</a><br>
+      <a href="about.html">About Institution</a><br>
+      <a href="timetable.html">View timetable</a><br>
+      <button class="logout-btn" onclick="window.location.href = 'index.php';">Logout</button>
+
+    </body>
+  </html>
+  
